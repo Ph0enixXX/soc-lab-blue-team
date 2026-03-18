@@ -1,0 +1,33 @@
+# Phishing Incident #3
+
+# ID 8816 #
+
+# Access to Blacklisted External URL Blocked by Firewall
+
+# Incident classification: True Positive
+
+# Time of activity:  03/08/2026 12:37:15.806
+
+# List of Affected Entities: 
+SourceIP: 10.20.2.17
+DestinationIP: 67.199.248.11
+URL: http://bit.ly/3sHkX3da12340
+Application: web-browsing
+
+# Reason for Classifying as True Positive: 
+User attempted to open URL listed in organization blacklist. 
+Logs confirmed that the user tried to connect to shortened URL which is commonly used in phishing campaings to disguise to malicious destinations.
+
+# Reason for Escalating the Alert: 
+The alert was escalated because the user attempted a known malicious URL. Althought the firewall blocked the connection, the user interacted with a phising link.
+
+# Recommended Remediation Actions: 
+- notify the affected user about phising links
+- perform endpoint security check on host 10.20.2.17
+- monitor network traffic for additional connections to the destination IP
+- ensure the malicious domain remains blocked in security controls.
+
+# List of Attack Indicators: 
+URL: http://bit.ly/3sHkX3da12340
+DestinationIP: 67.199.248.11
+SourceIP: 10.20.2.17
