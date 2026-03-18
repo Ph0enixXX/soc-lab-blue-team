@@ -1,0 +1,29 @@
+# Phising Incident #2
+
+# ID 8815 #
+
+# Inbound Email Containing Suspicious External Link
+
+# Incident Classification: True Positive
+
+# Time of activity: 03/08/2026 12:36:01.806
+
+# List of Affected Entities: 
+user: h.harris@thetrydaily.thm
+sender: urgents@amazon.biz
+Domain: amazon.biz
+URL: http://bit.ly/3sHkX3da12340
+
+# Reason for Classifying as True Positive: 
+The email was identified as phising attempt due to several suspicious indicators. 
+The sender domain (amazon.biz) does not match the legitimate Amazon domain and the message contains a shortened URL which is common method in phisihing campaings.
+
+# Recommended Remediation Actions: 
+- notify user about phising attempts
+- check the host in security controls
+
+# List of Attack Indicators: 
+sender: urgents@amazon.biz
+Domain: amazon.biz
+URL: http://bit.ly/3sHkX3da12340
+Subject: Your Amazon Package Couldn’t Be Delivered – Action Required
