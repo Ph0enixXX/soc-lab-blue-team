@@ -1,0 +1,23 @@
+# Phishing Incident #1
+
+# ID 8817 #
+
+# Inbound Email Containing Suspicious External Link 
+
+# Incident Classification: True Positive 
+
+# Time of activity: 03/08/2026 12:38:19.806 
+
+#  List of Affected Entities: #
+recipient: c.allen@thetrydaily.thm #
+sender: no-reply@m1crosoftsupport.co #
+Domain: microsoftsupport.co #
+URL: https://m1crosoftsupport.co/login #
+
+# Reason for Classifying as True Positive: 
+The alert was classified as phising attempt due to few suspicious vectors. 
+The domain is microsoftsupport.co which is not a true microsoft domain. 
+The URL was changed to diffrent than official microsoft domain URL.
+
+# Recommended Remediation Actions: 
+- notify the user about phising attempts
