@@ -1,29 +1,64 @@
-# Phising Incident #2
+# 🔍 Phishing Incident Report #2
 
-# ID 8815 #
+## 📌 Incident Overview
+- **Incident ID:** 8815  
+- **Classification:** ✅ True Positive  
+- **Type:** Phishing Attempt (External Link + URL Shortener)  
+- **Date & Time:** 2026-03-08 12:38:01  
 
-# Inbound Email Containing Suspicious External Link
+---
 
-# Incident Classification: True Positive
+## 📥 Detection Details
+An inbound email containing a suspicious external link was detected. The message included a shortened URL, commonly used to obscure malicious destinations.
 
-# Time of activity: 03/08/2026 12:36:01.806
+---
 
-# List of Affected Entities: 
-user: h.harris@thetrydaily.thm
-sender: urgents@amazon.biz
-Domain: amazon.biz
-URL: http://bit.ly/3sHkX3da12340
+## 👥 Affected Entities
+- **Recipient:** h.harris@thetrydaily.thm  
+- **Sender:** urgent@amazon.biz  
+- **Domain:** amazon.biz  
+- **URL:** http://bit.ly/3sHkX3d12340  
 
-# Reason for Classifying as True Positive: 
-The email was identified as phising attempt due to several suspicious indicators. 
-The sender domain (amazon.biz) does not match the legitimate Amazon domain and the message contains a shortened URL which is common method in phisihing campaings.
+---
 
-# Recommended Remediation Actions: 
-- notify user about phising attempts
-- check the host in security controls
+## ⚠️ Analysis & Findings
+The email was confirmed as a **phishing attempt** based on the following indicators:
 
-# List of Attack Indicators: 
-sender: urgents@amazon.biz
-Domain: amazon.biz
-URL: http://bit.ly/3sHkX3da12340
-Subject: Your Amazon Package Couldn’t Be Delivered – Action Required
+- ❌ The domain `amazon.biz` is **not an official Amazon domain**
+- ⚠️ Use of **URL shortening service (bit.ly)** to hide the real destination
+- 🎭 Brand impersonation of Amazon (social engineering)
+- 📧 Suspicious sender address inconsistent with legitimate Amazon infrastructure
+- 🚨 Urgent language used to pressure user action
+
+---
+
+## 🧠 Conclusion
+This incident has been classified as a **True Positive phishing attack** due to clear indicators of domain spoofing, social engineering techniques, and the use of obfuscated URLs.
+
+---
+
+## 🛡️ Recommended Actions
+- 📢 Notify the user about the phishing attempt  
+- 🚫 Block the malicious domain and URL  
+- 🔍 Expand monitoring for similar phishing emails  
+- 💻 Check the endpoint for potential compromise  
+- 🔐 Recommend password reset if user interaction occurred  
+
+---
+
+## 🧩 Indicators of Compromise (IOCs)
+- **Sender:** urgent@amazon.biz  
+- **Domain:** amazon.biz  
+- **URL:** http://bit.ly/3sHkX3d12340  
+- **Subject:** *Your Amazon Package Couldn't Be Delivered - Action Required*  
+
+---
+
+## 🧠 MITRE ATT&CK Mapping
+- **T1566.002** – Phishing: Spearphishing Link  
+- **T1036** – Masquerading  
+
+---
+
+## 🏷️ Tags
+`phishing` `soc` `incident-response` `email-security` `threat-analysis`
