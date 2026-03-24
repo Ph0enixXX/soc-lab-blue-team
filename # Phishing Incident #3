@@ -1,33 +1,72 @@
-# Phishing Incident #3
+# 🔍 Phishing Incident Report #3
 
-# ID 8816 #
+## 📌 Incident Overview
+- **Incident ID:** 8816  
+- **Classification:** ✅ True Positive  
+- **Type:** Phishing Attempt (User Interaction + Blocked by Firewall)  
+- **Severity:** 🔥 Medium  
+- **Date & Time:** 2026-03-08 12:37:15  
 
-# Access to Blacklisted External URL Blocked by Firewall
+---
 
-# Incident classification: True Positive
+## 📥 Detection Details
+A security alert was triggered after a user attempted to access a **blacklisted external URL**.  
+The connection was successfully **blocked by the firewall**, preventing further communication with the malicious destination.
 
-# Time of activity:  03/08/2026 12:37:15.806
+---
 
-# List of Affected Entities: 
-SourceIP: 10.20.2.17
-DestinationIP: 67.199.248.11
-URL: http://bit.ly/3sHkX3da12340
-Application: web-browsing
+## 🌐 Affected Entities
+- **Source IP:** 10.20.2.17  
+- **Destination IP:** 67.199.248.11  
+- **URL:** http://bit.ly/3sHkX3d12340  
+- **Application:** Web Browsing  
 
-# Reason for Classifying as True Positive: 
-User attempted to open URL listed in organization blacklist. 
-Logs confirmed that the user tried to connect to shortened URL which is commonly used in phishing campaings to disguise to malicious destinations.
+---
 
-# Reason for Escalating the Alert: 
-The alert was escalated because the user attempted a known malicious URL. Althought the firewall blocked the connection, the user interacted with a phising link.
+## ⚠️ Analysis & Findings
+The incident was confirmed as a **phishing-related event** based on the following indicators:
 
-# Recommended Remediation Actions: 
-- notify the affected user about phising links
-- perform endpoint security check on host 10.20.2.17
-- monitor network traffic for additional connections to the destination IP
-- ensure the malicious domain remains blocked in security controls.
+- ❌ The URL was present on the organization's **blacklist**
+- ⚠️ Use of **URL shortening service (bit.ly)** to obscure destination
+- 👤 User attempted to access the malicious link (**user interaction confirmed**)
+- 🧱 Firewall successfully blocked the outbound connection
+- 🌐 Destination IP associated with suspicious/malicious activity
 
-# List of Attack Indicators: 
-URL: http://bit.ly/3sHkX3da12340
-DestinationIP: 67.199.248.11
-SourceIP: 10.20.2.17
+---
+
+## 🚨 Escalation Reason
+The alert was escalated due to **user interaction with a known malicious URL**.  
+Even though the firewall blocked the connection, this indicates potential exposure risk.
+
+---
+
+## 🧠 Conclusion
+This incident has been classified as a **True Positive phishing attempt with user interaction**.  
+While no successful connection was established, the event required escalation due to the potential risk of compromise.
+
+---
+
+## 🛡️ Recommended Actions
+- 📢 Notify the affected user about phishing risks  
+- 💻 Perform endpoint security check on host (10.20.2.17)  
+- 🔍 Review browsing activity for additional suspicious behavior  
+- 🚫 Ensure malicious URL and IP remain blocked  
+- 🔐 Recommend password reset as precaution  
+
+---
+
+## 🧩 Indicators of Compromise (IOCs)
+- **URL:** http://bit.ly/3sHkX3d12340  
+- **Destination IP:** 67.199.248.11  
+- **Source IP:** 10.20.2.17  
+
+---
+
+## 🧠 MITRE ATT&CK Mapping
+- **T1566.002** – Phishing: Spearphishing Link  
+- **T1204.001** – User Execution: Malicious Link  
+
+---
+
+## 🏷️ Tags
+`phishing` `soc` `incident-response` `network-security` `threat-detection`
