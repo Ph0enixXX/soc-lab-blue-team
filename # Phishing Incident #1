@@ -1,23 +1,54 @@
-# Phishing Incident #1
+# 🔍 Phishing Incident Report #1
 
-# ID 8817 #
+## 📌 Incident Overview
+- **Incident ID:** 8817  
+- **Classification:** ✅ True Positive  
+- **Type:** Phishing Attempt (External Link)  
+- **Date & Time:** 2026-03-08 12:38:19  
 
-# Inbound Email Containing Suspicious External Link 
+---
 
-# Incident Classification: True Positive 
+## 📥 Detection Details
+An inbound email containing a suspicious external link was detected and flagged for analysis.
 
-# Time of activity: 03/08/2026 12:38:19.806 
+---
 
-#  List of Affected Entities: #
-recipient: c.allen@thetrydaily.thm #
-sender: no-reply@m1crosoftsupport.co #
-Domain: microsoftsupport.co #
-URL: https://m1crosoftsupport.co/login #
+## 👥 Affected Entities
+- **Recipient:** c.allen@thetrydaily.thm  
+- **Sender:** no-reply@microsoftsupport.co  
+- **Domain:** microsoftsupport.co  
+- **URL:** https://microsoftsupport.co/login  
 
-# Reason for Classifying as True Positive: 
-The alert was classified as phising attempt due to few suspicious vectors. 
-The domain is microsoftsupport.co which is not a true microsoft domain. 
-The URL was changed to diffrent than official microsoft domain URL.
+---
 
-# Recommended Remediation Actions: 
-- notify the user about phising attempts
+## ⚠️ Analysis & Findings
+The email was confirmed as a **phishing attempt** based on the following indicators:
+
+- ❌ The domain `microsoftsupport.co` is **not an official Microsoft domain**
+- ⚠️ The URL mimics a legitimate login page (**brand impersonation**)
+- 🔗 External link redirects to a suspicious login portal
+- 📧 Sender address does not match official Microsoft infrastructure
+
+---
+
+## 🧠 Conclusion
+This incident has been classified as a **True Positive phishing attack** due to multiple clear indicators of compromise (IOCs) and domain impersonation techniques.
+
+---
+
+## 🛡️ Recommended Actions
+- 📢 Notify the user about the phishing attempt  
+- 🚫 Block the malicious domain and URL  
+- 🔍 Monitor for similar phishing campaigns  
+- 🔐 Recommend password reset if interaction occurred  
+
+---
+
+## 🧩 MITRE ATT&CK Mapping (optional 🔥)
+- **T1566.002** – Phishing: Spearphishing Link  
+- **T1036** – Masquerading  
+
+---
+
+## 🏷️ Tags
+`phishing` `soc` `incident-response` `email-security` `blue-team`
