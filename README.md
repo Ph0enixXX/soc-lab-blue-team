@@ -65,9 +65,9 @@ This repository will contain documented phishing incident cases, including:
 
 ## 📂 Incident Reports
 
-- [Phishing Incident #1](./incidents/phishing-incident-1.md)
-- [Phishing Incident #2](./incidents/phishing-incident-2.md)
-- [Phishing Incident #3](./incidents/phishing-incident-3.md)
+- [Phishing Incident #1](./Phishing%20Incident%20%231.md)
+- [Phishing Incident #2](./Phishing%20Incident%20%232.md)
+- [Phishing Incident #3](./Phishing%20Incident%20%233.md)
   
 
 *(More cases will be added)*
